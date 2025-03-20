@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Redirector</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Website Redirector</h1>
+      <div class="extension-toggle">
+        <label for="extension-enabled">Enable Extension</label>
+        <input type="checkbox" id="extension-enabled" checked>
+      </div>
+    </header>
+
+    <div class="add-redirect">
+      <h2>Add New Redirect</h2>
+      <form id="redirect-form">
+        <div class="form-group">
+          <label for="source-url">Source URL</label>
+          <input type="text" id="source-url" placeholder="example.com" required>
+          <div class="help-text">Just enter the domain name (e.g., linkedin.com)</div>
+        </div>
+        <div class="form-group">
+          <label for="destination-url">Destination URL</label>
+          <input type="text" id="destination-url" placeholder="target-site.com" required>
+          <div class="help-text">Full URL or just domain name (https:// added automatically)</div>
+        </div>
+        <button type="submit" id="add-btn">Add Redirect</button>
+      </form>
+    </div>
+
+    <div class="redirects-list">
+      <h2>Your Redirects</h2>
+      <div id="no-redirects-message">No redirects added yet.</div>
+      <ul id="redirects-container"></ul>
+    </div>
+
+    <div class="settings">
+      <button id="settings-btn" class="settings-btn">⚙️ Settings</button>
+      <div id="settings-panel" class="settings-panel hidden">
+        <div class="settings-option">
+          <button id="export-btn" class="settings-action">Export Rules</button>
+        </div>
+        <div class="settings-option">
+          <label for="import-file" class="settings-action">Import Rules</label>
+          <input type="file" id="import-file" accept=".json" hidden>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html> 
