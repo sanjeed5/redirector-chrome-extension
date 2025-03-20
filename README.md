@@ -1,3 +1,5 @@
+> Disclaimer: Vibe coded in few minutes with Cursor. Redirecting works as expected. Haven't tested the import/export rules feature.
+
 # Website Redirector Chrome Extension
 
 A Chrome extension that allows you to set up custom website redirects. When you visit a source website, you will be automatically redirected to your specified destination website.
